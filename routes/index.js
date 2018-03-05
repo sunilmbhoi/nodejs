@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 
 /* GET Hello World page. */
 router.get('/helloworld', function(req, res) {
-	res.render('helloworld', { title: 'Hello, sunil' })
+	res.render('helloworld', { title: 'Hello, aditya' })
 });
 
 /* GET Userlist page. */
