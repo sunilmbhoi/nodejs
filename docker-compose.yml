@@ -1,0 +1,17 @@
+version: "2"
+services:
+  app:
+    container_name: app
+    restart: always
+    image: 192.168.56.160:5000/nodejscustom:latest 
+    ports:
+      - "3000:3000"
+    links:
+      - mongodatabase
+  mongodatabase:
+    container_name: mongodatabase
+    image: 192.168.56.160:5000/mongo:latest
+    volumes:
+      - /apps_volumes/data:/data/db
+    ports:
+      - "27017:27017"
